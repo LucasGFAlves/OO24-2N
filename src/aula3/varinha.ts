@@ -1,0 +1,23 @@
+export class Varinha{
+    private madeira:string;
+    private nucleo:string;
+    private tamanho:number;
+
+    setMadeira(madeira:string):void{this.madeira=madeira};
+    setNucleo(nucleo:string):void{this.nucleo = nucleo};
+    setTamanho(tamanho:number):void{this.tamanho = tamanho};
+
+    getMadeira():string{return this.madeira};
+    getNucleo():string{return this.nucleo};
+    getTamanho():number{return this.tamanho};
+
+    exibirDetalhes():void{
+        console.log(`Varinha de Madeira de ${this.madeira}, núcleo de ${this.nucleo} e tamanho ${this.tamanho}cm`)
+    }
+}
+
+const minhaVarinha = new Varinha();
+minhaVarinha.setMadeira("Carvalho");
+minhaVarinha.setNucleo("Unicórnio");
+minhaVarinha.setTamanho(20);
+minhaVarinha.exibirDetalhes();
